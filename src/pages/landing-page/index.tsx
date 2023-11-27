@@ -4,14 +4,14 @@ import Hamburger from '../../components/Hamburger'
 import SideNav from '../../components/SideNav';
 function Landing() {
     const navigate = useNavigate();
-    const [isSideNavOpen, setSideNavOpen] = useState<boolean>(true)
+    const [isSideNavOpen, setSideNavOpen] = useState<boolean>(false)
 
     return (
         <div className='bg-primary relative h-screen flex flex-col md:gap-8 md:flex-row py-8 md:px-8 md:py-16 w-full'>
             <div className='text-secondary text-5xl mt-10 flex justify-center md:w-[20%]'>
                 {` </ Code `}<br />{` Mehfil />`}
             </div>
-            <div className='flex items-end h-full cursor-pointer'>
+            <div className='flex items-end h-full cursor-pointer mx-8'>
                 <div className='bg-tertiary rounded w-[330px] h-[420px] m-auto md:m-0 flex flex-col mt-16 transition-transform duration-200 ease-in-out transform md:hover:scale-105'>
                     <div className='text-5xl text-center font-semibold tracking-[10px]'>NOW</div>
                     <div className='bg-primary rounded-s w-[96%] h-[70%] mx-auto text-secondary text-[150px] mt-2 flex items-center justify-center'>
@@ -52,7 +52,7 @@ function Landing() {
                 <Hamburger isSideNavOpen={isSideNavOpen} setSideNavOpen={setSideNavOpen} />
             </div>
             {isSideNavOpen &&
-                <SideNav isSideNavOpen={isSideNavOpen} setSideNavOpen={setSideNavOpen}/>
+                <SideNav isSideNavOpen={isSideNavOpen} setSideNavOpen={setSideNavOpen} />
             }
         </div>
     )
