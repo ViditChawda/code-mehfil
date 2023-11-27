@@ -4,7 +4,7 @@ import { X } from 'lucide-react'
 function Hamburger({ isSideNavOpen, setSideNavOpen }: { isSideNavOpen: boolean, setSideNavOpen: Function }) {
 
     return (
-        <div className=' bg-primary border-1 border-tertiary rounded-full '>
+        <div className=' bg-primary border border-tertiary rounded-full '>
             {isSideNavOpen ?
                 <div onClick={() => setSideNavOpen(false)} className='flex flex-col gap-1 w-12 p-3'>
                     <X color="#C8C8C8" strokeWidth={3} />
