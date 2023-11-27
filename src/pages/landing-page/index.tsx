@@ -48,7 +48,7 @@ function Landing() {
                     Uniting tech enthusiasts through diverse and exciting events. Join the conversation, share knowledge, and elevate your coding journey!
                 </div>
             </div>
-            <div className='fixed md:hidden top-2 right-2 z-30'>
+            <div className='fixed md:hidden top-4 right-4 z-30'>
                 <Hamburger isSideNavOpen={isSideNavOpen} setSideNavOpen={setSideNavOpen} />
             </div>
             {isSideNavOpen &&
