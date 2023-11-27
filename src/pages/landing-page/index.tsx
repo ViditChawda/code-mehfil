@@ -8,7 +8,7 @@ function Landing() {
 
     return (
         <div className='bg-primary relative h-screen flex flex-col md:gap-8 md:flex-row py-8 md:px-8 md:py-16 w-full'>
-            <div className='text-secondary text-5xl mt-10 flex justify-center md:w-[20%]'>
+            <div className='text-secondary text-5xl mt-5 flex justify-center md:w-[20%]'>
                 {` </ Code `}<br />{` Mehfil />`}
             </div>
             <div className='flex items-end h-full cursor-pointer mx-4'>
@@ -48,7 +48,7 @@ function Landing() {
                     Uniting tech enthusiasts through diverse and exciting events. Join the conversation, share knowledge, and elevate your coding journey!
                 </div>
             </div>
-            <div className='fixed md:hidden top-4 right-4 z-30'>
+            <div className='fixed md:hidden top-2 right-2 z-30'>
                 <Hamburger isSideNavOpen={isSideNavOpen} setSideNavOpen={setSideNavOpen} />
             </div>
             {isSideNavOpen &&
