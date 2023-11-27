@@ -1,9 +1,14 @@
-import React from 'react'
-
+import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import Hamburger from '../../components/Hamburger'
+import SideNav from '../../components/SideNav';
 function Landing() {
+    const navigate = useNavigate();
+    const [isSideNavOpen, setSideNavOpen] = useState<boolean>(true)
+
     return (
-        <div className='bg-primary h-screen flex flex-col md:gap-8 md:flex-row py-8 md:px-8 md:py-16 w-full'>
-            <div className='text-secondary text-5xl flex justify-center md:w-[20%]'>
+        <div className='bg-primary relative h-screen flex flex-col md:gap-8 md:flex-row py-8 md:px-8 md:py-16 w-full'>
+            <div className='text-secondary text-5xl mt-10 flex justify-center md:w-[20%]'>
                 {` </ Code `}<br />{` Mehfil />`}
             </div>
             <div className='flex items-end h-full cursor-pointer'>
@@ -21,16 +26,16 @@ function Landing() {
             </div>
             <div className='text-secondary hidden md:block w-full ml-24 justify-evenly'>
                 <div className='flex flex-row gap-24 items-center justify-center text-5xl'>
-                    <p className='cursor-pointer'>ABOUT US</p>
-                    <p className='cursor-pointer'>CONTACT</p>
-                    <p className='cursor-pointer'>EVENTS</p>
+                    <p onClick={() => navigate('/about-us')} className='cursor-pointer'>ABOUT US</p>
+                    <p onClick={() => navigate('/contact-us')} className='cursor-pointer'>CONTACT</p>
+                    <p onClick={() => navigate('/events')} className='cursor-pointer'>EVENTS</p>
                 </div>
                 <div className='text-8xl flex flex-col mt-20'>
                     <p>EVENTS & </p>
                     <p>SESSIONS</p>
                 </div>
                 <div className='h-3 bg-secondary rounded-s mt-10'></div>
-                <div className='font-sans text-4xl font-semibold mt-20'>
+                <div className='font-sans text-tertiary text-3xl font-semibold mt-20'>
                     Uniting tech enthusiasts through diverse and exciting events. Join the conversation, share knowledge, and elevate your coding journey!
                 </div>
             </div>
@@ -39,10 +44,16 @@ function Landing() {
                     <p>EVENTS & SESSIONS</p>
                 </div>
                 <div className='h-1 bg-secondary rounded-s mt-2'></div>
-                <div className='font-sans text-2xl text-center text-secondary font-semibold mt-20 mb-20'>
+                <div className='font-sans text-2xl text-center text-tertiary font-semibold mt-20 mb-20'>
                     Uniting tech enthusiasts through diverse and exciting events. Join the conversation, share knowledge, and elevate your coding journey!
                 </div>
             </div>
+            <div className='fixed md:hidden top-4 right-4 z-30'>
+                <Hamburger isSideNavOpen={isSideNavOpen} setSideNavOpen={setSideNavOpen} />
+            </div>
+            {isSideNavOpen &&
+                <SideNav isSideNavOpen={isSideNavOpen} setSideNavOpen={setSideNavOpen}/>
+            }
         </div>
     )
 }
