@@ -14,7 +14,7 @@ function Landing() {
             <div className='flex items-end h-full cursor-pointer mx-4 py-2'>
                 <div className='bg-tertiary rounded w-[330px] h-[420px] m-auto md:m-0 flex flex-col mt-16 transition-transform duration-200 ease-in-out transform md:hover:scale-105'>
                     <div className='text-5xl text-center font-semibold tracking-[10px]'>NOW</div>
-                    <div className='bg-primary rounded-s w-[96%] h-[70%] mx-auto text-secondary text-[150px] mt-2 flex items-center justify-center'>
+                    <div className='bg-primary rounded-s w-[96%] h-[68%] mx-auto text-secondary text-[150px] mt-2 flex items-center justify-center'>
                         JS.
                     </div>
                     <div className='flex flex-col text-base font-medium items-center justify-center mt-2'>
